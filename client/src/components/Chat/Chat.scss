@@ -1,0 +1,253 @@
+.Chat {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+    .chan {
+      width: 80%;
+      display: flex;
+      align-items: center;
+     
+      background-color: #121212;
+      border-radius: 20px;
+  
+      .messages {
+        padding: 86px 51px 0 42px;
+        width: 31%;
+        height: 680px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        background-color:#1a1a1a;
+        border-radius: 20px 0px 0px 20px;
+        overflow: auto;
+  
+        .messageSection {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          gap: 20px;
+          padding: 8px 12px 8px 20px;
+          background-color: rgb(54, 54, 54);
+          border-left: 7px solid rgb(54, 54, 54);
+          border-radius: 10px;
+          cursor: pointer;
+  
+  
+          img {
+            width: 85px;
+            height: 85px;
+            border-radius: 50%;
+          }
+  
+          .messageUserInfo {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+  
+            .messageUserName {
+              font-size: 30px;
+            }
+  
+            .messageUserShort {
+              font-size: 20px;
+              color: var(--color-grey);
+            }
+          }
+        }
+      }
+  
+      .zeroMessage, .selectedMessages {
+        width: 100%;
+        display: flex;
+        min-height: 100%;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+  
+        .nomessage {
+          .title {
+            font-size: 70px;
+            color: rgb(255, 255, 255);
+          }
+  
+          span {
+            margin-top: 20px;
+            font-size: 30px;
+            color: var(--color-grey);
+          }
+        }
+      }
+  
+      .selectedMessages {
+        .selectedMessage {
+          width: 100%;
+          height: 766px;
+          overflow: auto;
+          display: flex;
+          flex-direction: column;
+        }
+  
+        .selectedMessageHeader {
+          width: auto;
+          padding-left: 3%;
+          display: flex;
+          align-items: center;
+          gap: 15px;
+          position: sticky;
+          background-color: rgb(54, 54, 54);
+          top: 0px;
+          padding-block: 5px;
+  
+          img {
+            width: 70px;
+            border-radius: 50%;
+            height: 70px;
+          }
+  
+          span {
+            font-size: 25px;
+          }
+        }
+  
+        .messageDate {
+          padding-block: 15px;
+          color: var(--color-grey);
+        }
+  
+        .chatM {
+          display: flex;
+          flex-direction: column;
+          height: auto;
+        }
+  
+        .myMessage, .usersMessage {
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 48px;
+  
+          span {
+            align-self: flex-end;
+            color: var(--color-grey);
+            font-size: 12px;
+            padding-right: 10px;
+          }
+        }
+  
+        .myMessage {
+          border-radius: 20px 20px 0px 20px;
+          background-color: rgb(26, 166, 141);
+          padding: 11px 15px; 
+          margin-right: 80px;
+          align-self: flex-end;
+  
+          .myMessageBody {
+            padding-right: 55px;
+            text-align: left;
+            font-size: 20px;
+            width: 285px;
+          }
+        }
+  
+        .usersMessage {
+          background-color: white;
+          align-self: flex-start;
+          padding: 11px 15px;
+          border-radius: 20px 20px 20px 0px;
+          margin-left: 81px;
+  
+          .usersMessageBody {
+            width: 285px;
+            padding: 11px 20px 11px 15px;
+            text-align: left;
+          }
+        }
+      }
+    }
+  
+    .sendBox {
+      width: 96%;
+      display: flex;
+      gap: 1%;
+      padding-bottom: 8.5px;
+      position: absolute;
+      bottom: -3px;
+      margin-inline: auto;
+      height: 58px;
+      align-self: center;
+      align-items: center;
+      background-color: whitesmoke;
+  
+      .inputbox {
+        display: flex;
+        gap: 1%;
+        border-radius: 30px;
+        background-color: white;
+        width: 100%;
+        align-items: center;
+  
+        .svg {
+          padding-left: 17px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+        }
+  
+        textarea {
+          outline: none;
+          min-height: 17px;
+          padding: 17px 20px;
+          font-size: 20px;
+          border-radius: 10px;
+          white-space: pre-wrap;
+          resize: none;
+          border: none;
+          height: 16px;
+          width: 90%;
+        }
+      }
+  
+      button {
+        cursor: pointer;
+        outline: none;
+        border: none;
+        border-radius: 50%;
+        padding: 12px;
+        background-color:#1AA68D;
+        height: 50px;
+      }
+    }
+  }
+  
+  @media (max-width: 1400px) {
+    .Chat .section .selectedMessages .myMessage {
+      margin-right: 40px;
+    }
+  
+    .Chat .section .selectedMessages .usersMessage {
+      margin-left: 40px;
+    }
+  }
+  
+  @media (max-width: 1200px) {
+    .Chat .section .messages .messageSection .messageUserInfo {
+      display: none;
+    }
+  }
+  
+  @media (max-width: 991px) {
+    .Chat .section .selectedMessages .nomessage .title {
+      font-size: 45px;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .Chat .section .zeroMessage .nomessage .title {
+      font-size: 45px;
+    }
+  }

@@ -1,0 +1,52 @@
+// Bento.scss
+.bento-section {
+    background-color: #000;
+    color: #fff;
+    padding: 4rem 2rem;
+    text-align: center;
+  
+    h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+    }
+  
+    .bento-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+  
+    .bento-card {
+      background-color: #121212;
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+      text-align: left;
+      transition: transform 0.2s ease;
+  
+      &:hover {
+        transform: translateY(-5px);
+      }
+  
+      .bento-icon {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+      }
+  
+      h3 {
+        font-size: 1.4rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+      }
+  
+      p {
+        color: #ccc;
+        font-size: 0.95rem;
+        line-height: 1.6;
+      }
+    }
+  }
+  

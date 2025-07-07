@@ -1,0 +1,81 @@
+.Login {
+  background-color: #0d0d0d;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .login-box {
+    width: 100%;
+    max-width: 450px;
+    margin: auto;
+    padding: 40px;
+    background-color: #1a1a1a;
+    border-radius: 12px;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.05);
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 30px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+
+      label {
+        font-weight: 500;
+        margin-top: 20px;
+      }
+
+      input {
+        margin-top: 8px;
+        padding: 12px 16px;
+        background-color: #2b2b2b;
+        border: none;
+        border-radius: 8px;
+        color: white;
+        font-size: 15px;
+
+        &:focus {
+          outline: 2px solid #3e3e3e;
+        }
+      }
+
+      .login-btn {
+        margin-top: 30px;
+        padding: 12px 0;
+        background-color: white;
+        color: black;
+        font-weight: bold;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #e0e0e0;
+        }
+      }
+    }
+
+    .redirect-signup {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 14px;
+
+      a {
+        color: #00bfff;
+        margin-left: 6px;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

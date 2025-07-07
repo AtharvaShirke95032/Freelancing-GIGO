@@ -1,0 +1,158 @@
+.Chat {
+    .section {
+      .selectedMessages {
+        width: 100%;
+        display: flex;
+        min-height: 100%;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        
+        .nomessage {
+          .title {
+            font-size: 70px;
+            color: var(--color-orange);
+          }
+          
+          span {
+            margin-top: 20px;
+            font-size: 30px;
+            color: var(--color-grey);
+          }
+        }
+  
+        .selectedMessageHeader {
+          width: auto;
+          padding-left: 3%;
+          display: flex;
+          align-items: center;
+          gap: 15px;
+          position: sticky;
+          background-color: whitesmoke;
+          top: 0px;
+          padding-block: 5px;
+          
+          img {
+            width: 70px;
+            border-radius: 50%;
+            height: 70px;
+          }
+  
+          span {
+            font-size: 25px;
+          }
+        }
+  
+        .messageDate {
+          padding-block: 15px;
+          color: var(--color-grey);
+        }
+  
+        .chatM {
+          display: flex;
+          flex-direction: column;
+        }
+  
+        .myMessage, .usersMessage {
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 48px;
+        }
+  
+        .myMessage {
+          border-radius: 20px 20px 0px 20px;
+          background-color: var(--color-orange);
+          padding-block: 11px;
+          padding-left: 15px;
+          margin-right: 80px;
+          align-self: flex-end;
+          
+          .myMessageBody {
+            padding-right: 55px;
+            text-align: left;
+            font-size: 20px;
+            width: 285px;
+          }
+        }
+  
+        .usersMessage {
+          background-color: white;
+          align-self: flex-start;
+          padding-block: 11px;
+          padding-right: 15px;
+          border-radius: 20px 20px 20px 0px;
+          margin-left: 81px;
+          
+          .usersMessageBody {
+            width: 285px;
+            padding-top: 11px;
+            padding-right: 20px;
+            padding-left: 15px;
+            text-align: left;
+          }
+        }
+  
+        .myMessage span, .usersMessage span {
+          align-self: flex-end;
+          color: var(--color-grey);
+          font-size: 12px;
+          padding-right: 10px;
+        }
+      }
+    }
+  
+    .sendBox {
+      width: 96%;
+      display: flex;
+      gap: 1%;
+      padding-bottom: 8.5px;
+      position: absolute;
+      bottom: -3px;
+      margin-inline: auto;
+      height: 58px;
+      align-self: center;
+      align-items: center;
+      background-color: whitesmoke;
+  
+      .inputbox {
+        display: flex;
+        gap: 1%;
+        border-radius: 30px;
+        background-color: white;
+        width: 100%;
+        align-items: center;
+  
+        .svg {
+          padding-left: 17px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+        }
+  
+        textarea {
+          outline: none;
+          min-height: 17px;
+          padding: 17px 20px;
+          font-size: 20px;
+          border-radius: 10px;
+          white-space: pre-wrap;
+          resize: none;
+          border: none;
+          height: 16px;
+          width: 90%;
+        }
+      }
+  
+      button {
+        cursor: pointer;
+        outline: none;
+        border: none;
+        border-radius: 50%;
+        padding: 12px;
+        background-color: var(--color-orange);
+        height: 50px;
+      }
+    }
+  }

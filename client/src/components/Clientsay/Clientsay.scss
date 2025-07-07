@@ -1,0 +1,110 @@
+.clientsay-section {
+    background-color: #000;
+    color: white;
+    padding: 4rem 2rem;
+    text-align: center;
+    overflow: hidden;
+  
+    h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+  
+    .subtitle {
+      color: #aaa;
+      font-size: 1rem;
+      margin-bottom: 3rem;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  
+    .slider {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+  
+      .slide-track {
+        display: flex;
+        width: calc(300px * 8);
+        animation: scroll 20s linear infinite;
+      }
+  
+      .testimonial-card {
+        flex: 0 0 auto;
+        width: 300px;
+        background-color: #121212;
+        margin: 0 1rem;
+        padding: 1.5rem;
+        border-radius: 1rem;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+  
+        .client-info {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          margin-bottom: 1rem;
+  
+          img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+          }
+  
+          div {
+            text-align: left;
+  
+            strong {
+              display: block;
+              font-weight: 600;
+              font-size: 1rem;
+            }
+  
+            span {
+              color: #888;
+              font-size: 0.85rem;
+            }
+          }
+        }
+  
+        p {
+          color: #ccc;
+          font-size: 0.95rem;
+        }
+      }
+  
+      // Fade overlay effects
+      .fade {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 80px;
+        z-index: 2;
+        pointer-events: none;
+  
+        &.fade-left {
+          left: 0;
+          background: linear-gradient(to right, #000 0%, transparent 100%);
+        }
+  
+        &.fade-right {
+          right: 0;
+          background: linear-gradient(to left, #000 0%, transparent 100%);
+        }
+      }
+    }
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  

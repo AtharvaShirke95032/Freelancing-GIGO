@@ -1,0 +1,202 @@
+.con {
+  width: 100%;
+  gap: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  background-color: #0a0a0a;
+  
+
+  .grid {
+    display: grid;
+    width: 100%;
+    max-width: 1400px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(200px, auto);
+    gap: 24px;
+   
+    
+   
+
+    .salmon,
+    .broccoli,
+    .tamago,
+    .pork,
+    .edamame {
+      background-color: rgba(34, 34, 34, 0.85);
+      backdrop-filter: blur(8px);
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      display: flex;
+      flex-direction: column;
+      color: #f0f0f0;
+
+      &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+      }
+    }
+
+    .salmon {
+     
+      justify-content: space-between;
+      align-items: flex-start;
+
+      .maintext {
+        font-size: 3.2rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 8px;
+      }
+
+      p {
+        font-size: 1.1rem;
+        font-weight: 400;
+        text-align: start;
+        color: #ccc;
+      }
+    }
+
+    .broccoli {
+      
+     
+      align-items: center;
+      justify-content: center;
+
+      h2 {
+        font-size: 32px;
+        color: #fff;
+      }
+
+      p {
+        font-size: 100px;
+        color: #ffffff;
+      }
+    }
+
+    .tamago {
+      grid-column: span 1;
+      grid-row: span 3;
+      justify-content: space-between;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .collect {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        h2 {
+          font-size: 28px;
+        }
+
+        input {
+          padding: 14px;
+          font-size: 16px;
+          width: 100%;
+          border-radius: 12px;
+          border: none;
+          outline: none;
+          background-color: #272727;
+          color: #fff;
+        }
+      }
+    }
+
+    .pork {
+      grid-column: span 2;
+      grid-row: span 1;
+      gap: 24px;
+
+      h2 {
+        font-size: 26px;
+        font-weight: 600;
+        color: #fff;
+        text-align: start;
+        width: 100%;
+      }
+
+      .card {
+        .testimonial-list {
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+          overflow-y: auto;
+          max-height: 100%;
+        }
+
+        .testimonial-card {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          padding: 12px;
+          background-color: #1f1f1f;
+          border-radius: 10px;
+
+          img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+          }
+
+          .testimonial-info {
+            display: flex;
+            flex-direction: column;
+
+            .cardHeader {
+              font-size: 18px;
+              font-weight: bold;
+              color: #fff;
+            }
+
+            .cardDescription {
+              font-size: 14px;
+              color: #aaa;
+            }
+          }
+        }
+      }
+    }
+
+    .edamame {
+      grid-column: span 2;
+      justify-content: space-between;
+
+      h2 {
+        font-size: 32px;
+        
+        text-align: start;
+      }
+
+      p {
+        font-size: 64px;
+        background-color: #252525;
+        padding: 10px 20px;
+        border-radius: 12px;
+        color: #fff;
+      }
+    }
+  }
+
+  // Responsiveness
+  @media (max-width: 768px) {
+    .grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 480px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+
+    .pork {
+      grid-column: span 1 !important;
+    }
+  }
+}

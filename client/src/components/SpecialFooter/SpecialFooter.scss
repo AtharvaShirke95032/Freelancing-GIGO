@@ -1,0 +1,44 @@
+.specialfooter {
+    border-radius: 30px 30px 0px 0px;
+    width: 100%;
+    background-color: #000000;
+    display: flex;
+    border-top: 1px solid black;
+    justify-content: center;
+    color: black;
+  
+    footer {
+      width: 70%;
+      text-align: center;
+      display: flex;
+      flex-wrap: wrap;
+      color: rgb(0, 0, 0);
+      justify-content: space-between;
+      gap: 20px;
+      align-items: center;
+      min-height: 58px;
+    }
+  
+    .socials {
+      min-width: 20%;
+      display: flex;
+      justify-content: space-around;
+  
+      svg {
+        width: 25px;
+        height: 25px;
+        fill: rgb(0, 0, 0);
+      }
+    }
+  
+    @media (max-width: 712px) {
+      footer {
+        justify-content: center;
+        padding: 10px 0px;
+      }
+  
+      .socials {
+        gap: 5px;
+      }
+    }
+  }

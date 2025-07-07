@@ -1,0 +1,90 @@
+.expense-container {
+    width: 90%;
+   height: 60%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+    text-align: center;
+    padding: 10px;
+    background: #000000;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+  
+  
+    h3 {
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+   
+    .expense-info {
+      width: 250px;
+      height: 100px;
+      font-size: 15px;
+      margin-top: 10px;
+        color: white;
+        padding: 20px;
+       text-align: left;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+        
+      span{
+        
+        background-color: #121212;
+        
+        border-radius: 10px;
+        
+      }
+      
+    }
+  
+    .progress-circle {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 20px auto;
+      position: relative;
+     
+  
+      svg {
+        transform: rotate(-90deg);
+
+
+      
+      }
+     
+      circle {
+        fill: none;
+        stroke-width: 10;
+        stroke-linecap: round;
+        transform-origin: center;
+        transition: stroke-dashoffset 0.5s ease-in-out;
+      }
+
+     
+  
+      .progress-bg {
+        stroke: #ddd;
+      }
+  
+      .progress-fill {
+        stroke: #4caf50;
+        stroke-dasharray: 440; // Total circumference of the circle
+        stroke-dashoffset: 440;
+      }
+  
+      .progress-text {
+        font-size: 20px;
+        font-weight: bold;
+        fill: #ffffff;
+        dominant-baseline: middle;  // Center vertically
+        text-anchor: middle;         // Center horizontally
+        transform: rotate(90deg);    // Fix rotation
+        transform-origin: center;
+      }
+    }
+  }
+  
